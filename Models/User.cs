@@ -1,11 +1,11 @@
-﻿namespace sacremap_web_api.Models
+﻿using Microsoft.AspNetCore.Identity;
+using sacremap_web_api.Models;
+
+namespace sacremap.Models
 {
-    public class User
+    public class User : IdentityUser
     {
-        public int Id { get; set; }
-        public required string Email { get; set; }
-        public string UserName { get; set; } = string.Empty;
-        public required string Password { get; set; }
-        public DateTime CreaterAt { get; set; }
+        public virtual ICollection<Visitation> Visitations { get; set; }
+
     }
 }

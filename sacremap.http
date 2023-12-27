@@ -1,0 +1,6 @@
+@sacremap_HostAddress = http://localhost:5234
+
+GET {{sacremap_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
